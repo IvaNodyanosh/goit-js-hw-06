@@ -4,8 +4,8 @@ const validationInput = Number(input.getAttribute('data-length'));
 
 
 
-const checkInputValue = (event) => {
-    if (validationInput === event.currentTarget.value.length) {
+const checkInputValue = () => {
+    if (validationInput === input.value.length) {
     
         if (input.classList.contains('invalid')) {
             input.classList.replace('invalid', 'valid');
