@@ -38,15 +38,25 @@ const createBoxes = function (amount) {
 }
 
 
+const destroyBoxes = function () {
+
+  boxes.innerHTML = ""
+
+  elements.length = 0;
+
+  input.value = '';
+
+
+}
+
+
 // const inputValue = input.addEventListener('input', event => event.currentTarget.value)
 
-input.addEventListener('input', (event) => {
-  const inputValue = event.currentTarget.value;
 
-  createElemBtn.addEventListener("click", () => createBoxes(inputValue))
-})
 
-destroyElemBtn.addEventListener('click', () => boxes.innerHTML = '')
+createElemBtn.addEventListener("click", () => createBoxes(input.value))
+
+destroyElemBtn.addEventListener('click', destroyBoxes)
 
 
 
