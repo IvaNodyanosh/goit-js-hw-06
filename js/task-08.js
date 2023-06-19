@@ -14,6 +14,8 @@ const checkForm = function (event) {
     } else {
         dataForm.email = email.value;
         dataForm.password = password.value;
+        console.log(dataForm.email);
+        console.log(dataForm.password);
         loginForm.reset();
 
     }
